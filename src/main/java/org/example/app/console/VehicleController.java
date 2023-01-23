@@ -26,13 +26,8 @@ public class VehicleController {
     }
 
     public void getVehicle(String registrationnumber){
-
-        vehicelRegisterLoad.loadVehicle(registrationnumber);
+        vehicleValidator.validateString(registrationnumber);
+        vehicelRegisterLoad.loadVehicle(vehicleParser.RegistrationNumberToJson(registrationnumber));
     }
 
-    private void stop(String action){
-        if(action.equals("Stop")){
-            running = false;
-        }
-    }
 }
