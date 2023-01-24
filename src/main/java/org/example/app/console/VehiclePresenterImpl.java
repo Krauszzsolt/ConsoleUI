@@ -3,13 +3,13 @@ package org.example.app.console;
 import org.example.app.console.parser.VehicleParser;
 import org.example.app.interfaces.Presenter;
 import org.example.app.console.viewModel.VehicleViewModel;
-import org.example.app.console.validator.VehicleValidator2;
+import org.example.app.console.validator.vehicleValidator;
 
 public class VehiclePresenterImpl implements Presenter {
 
     VehicleView view ;
     VehicleParser vehicleParser = new VehicleParser();
-    VehicleValidator2 vehicleValidator = new VehicleValidator2();
+    org.example.app.console.validator.vehicleValidator vehicleValidator = new vehicleValidator();
 
     public VehiclePresenterImpl(VehicleView view) {
         this.view = view;
